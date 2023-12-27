@@ -17,7 +17,7 @@ These definitions for this demo are in `<path-to-bsp>/board/fal_cfg.h`.
 | preload    |  4 MB | 0x00000000 | 0x3000000 |
 | rtthread0  |  4 MB | 0x00400000 | 0x0000000 |
 | rtthread1  |  4 MB | 0x00800000 | 0x0000000 |
-| filesystem | 20 MB | 0x00C00000 | 0x3000000 |
+| filesystem | 20 MB | 0x00C00000 | N/A |
 
 ## Notice
 
