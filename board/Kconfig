@@ -1,0 +1,35 @@
+menu "Hardware Drivers Config"
+
+    menu "On-chip Peripheral Drivers"
+        source "./libraries/nuc980/rtt_port/Kconfig"
+    endmenu
+
+    menu "On-board Peripheral Drivers"
+
+        config BSP_USING_CONSOLE
+            bool "Enable UART0 for RTT Console(uart0)"
+            select BSP_USING_UART
+            select BSP_USING_UART0
+            default y
+
+        config BOARD_USING_STORAGE_SPIFLASH
+            bool "SPI NOR FLASH supporting(over qspi0)"
+            select BSP_USING_QSPI
+            select BSP_USING_QSPI0
+            default y
+
+    endmenu
+
+    menu "Board extended module drivers"
+
+        config BOARD_USING_IP101GR
+            bool "Enable ethernet phy supporting(over emac/mdio)"
+            select BSP_USING_EMAC
+            select BSP_USING_EMAC1
+            default n
+
+    endmenu
+
+    source "./libraries/nu_packages/Kconfig"
+
+endmenu
